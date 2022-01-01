@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        * {
+    margin: 0px;
+    padding: 0px;
+    font-family: consolas, "Helvetica Ne";
+}
+.home {
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient( 33.2deg,  rgba(157,147,247,1) 30.2%, rgba(117,176,247,1) 61.4% );
+}
+.Logotext {
+    cursor: pointer;
+    margin-left: 10px;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navlinks {
+    text-align: right;
+}
+.navlinks li {
+    display: inline-block;
+    padding: 8px 6px;
+    list-style: none;
+    position: relative;
+}
+.navlinks li a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+.navlinks li::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    display: block;
+    position: absolute;
+    margin: auto;
+    background: rgb(0, 0, 0);
+}
+html {
+    scroll-behavior: smooth;
+}
+.navlinks ul {
+    display: flex;
+}
+.navlinks li:hover::after {
+    width: 77%;
+    transition: 0.8s;
+}
+.hcontent {
+    text-align: center;
+    margin-top: 300px;
+}
+.line {
+    margin: auto;
+    height: 1px;
+    align-items: center;
+    width: 150px;
+    margin-bottom: 3px;
+    height: 1px;
+    padding: 1px;
+    border-radius: 360px;
+    background-color: rgb(177, 0, 101);
+}
+.learnbutton {
+    padding: 7px 16px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 30px;
+    background: transparent;
+    transition: 1s;
+}
+.learnbutton:hover {
+    background: rgb(244, 244, 244);
+}
+.learn {
+    margin-top: 40px;
+    text-align: center;
+}
+.learn p {
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+.blogbox {
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    padding: 10px;
+}
+.blogbox img {
+    padding: 10px;
+    height: 200px;
+    width: 400px;
+    margin-left: 0px;
+}
+.lcontent {
+    margin: auto;
+    width: 400px;
+    font-size: 12px;
+    font-weight: 300;
+    font-family: monospace;
+
+}
+.games p {
+    font-weight: bold;
+}
+.python {
+    box-shadow: 5px 5px 10px rgb(107, 107, 107);
+    background: rgba(255, 238, 215, 0.648);
+}
+.gamedev {
+    margin-left: 12px;
+    margin-right: 12px;
+    box-shadow: 5px 5px 10px rgb(107, 107, 107);
+    background: rgba(255, 238, 215, 0.648);
+} 
+.gameev {
+    width: 424px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgb(107, 107, 107);
+    background: rgba(255, 238, 215, 0.648);
+}
+.cubing {
+    box-shadow: 5px 5px 10px rgb(107, 107, 107);
+    background: rgba(255, 238, 215, 0.648);
+}
+.games {
+    margin-top: 50px;
+    text-align: center;
+}
+.lbt {
+    font-weight: bold;
+    font-family: consolas, "Courier New", monospace;
+    margin-bottom: 20px;
+    padding: 7px 21px;
+    border: 2px solid #f72936;
+    background: transparent;
+    border-radius: 30px;
+    transition: 1s;
+}
+.lbt:hover {
+    background: #f72936;
+}
+.gamesbox {
+    justify-content: center;
+    margin-top: 70px;
+}
+.gamesbox img {
+    width: 400px;
+    height: 250px;
+}
+.scorer {
+    margin: auto;
+    padding: 10px;
+    width: 400px;
+    margin-bottom: 75px;
+    box-shadow: 5px 5px 10px rgb(107 107 107);
+    background: rgba(255, 238, 215, 0.648);
+    margin-top: -155px;
+}
+.downloadbt {
+    font-weight: bold;
+    font-family: consolas, "Courier New", monospace;
+    margin-bottom: 20px;
+    margin-top: -155px;
+    margin-top: 20px;
+    padding: 7px 21px;
+    border: 2px solid #f72936;
+    background: transparent;
+    border-radius: 30px;
+    transition: 1s;
+}
+.downloadbt:hover {
+   background: #f72936;
+}
+.apps {
+    margin-top: 60px;
+}
+.apps h1{
+    text-align: center;
+}
+.apps h2{
+    margin: auto;
+    text-align: center;
+}
+.accl {
+    text-align: center;
+    font-weight: bold;    
+}
+.scorer {
+    width: 40%;
+}
+.abline {
+    margin: auto;
+    height: 1px;
+    align-items: center;
+    width: 150px;
+    margin-bottom: 3px;
+    height: 1px;
+    padding: 1px;
+    border-radius: 360px;
+    background-color: rgb(177, 0, 101);
+}
+.about {
+    text-align: center;
+}
+.about p {
+    font-weight: bold;
+}
+.footer {
+    width: 100%;
+    height: 70vh;
+    color: #ffffff;
+    background: rgb(22, 22, 22);
+    text-align: center;
+}
+.pdh {
+    margin-top: 5px;
+    padding: 8px;
+    padding-top: 65px;
+}
+.pdh2 {
+    padding: 8px;
+}
+.smf {
+    padding: 45px;
+    margin: auto;
+    width: 30%;
+}
+.copyright {
+    padding: 10px;
+}
+@media only screen and (max-width:1100px) {
+    .footer {
+        height: 80vh;
+    }
+}
+@media only screen and (max-width:850px) {
+    .Logotext {
+        margin: auto;
+        padding: 5px;
+    }
+    .navlinks {
+        width: 100%;
+    }
+    .navlinks li:hover::after {
+        width: 10%;
+        position: relative;
+    }
+    .navlinks ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .blogbox {
+        flex-direction: column;
+    }
+    .blogbox img {
+        width: 300px;
+        height: 150px;
+        margin: auto;
+    }
+}
+@media only screen and (max-width: 1350px) {
+    .blogbox {
+        flex-direction: column;
+    }
+    .blogbox img {
+        width: 300px;
+        height: 150px;
+        margin: auto;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .lcontent {
+        width: 200px;
+    }
+    .blogbox img {
+        width: 200px;
+        height: 100px;
+    }
+    .gamesbox img {
+        width: 200px;
+        height: 100px;
+    }
+    .gameev {
+        width: 200px;
+
+    }
+}
+@media only screen and (max-width: 250px) {
+    * {
+        display: none;
+    }
+
+
+}
+    </style>
+    <title>MSBrothers</title>
+</head>
+<body>
+    <section class="home" id="home">
+        <nav class="navbar">
+            <h1 class="Logotext" >MSBrothers</h1>
+            <div class="navlinks">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#learn">Learn</a></li>
+                    <li><a href="#games">Games</a></li>
+                    <li><a href="#apps">Apps</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="hcontent">
+            <h1>Tech World</h1>
+            <div class="line"></div>
+            <p>Explore the tech world.</p>
+            <button class="learnbutton">Learn more</button>
+        </div>
+    </section>
+    <section class="learn" id="learn">
+        <h1>Learn</h1>
+        <p>Learn the tech world with me.</p>
+        <div class="blogbox">
+            <div class="python">
+                <img src="Master.jpg" alt="" class="pp">
+                <h1>Learn Python</h1>
+                <p class="lcontent">Python is a programming language. Often use to make websites, software, automate tasks and making ai (artificial intelligence). And learning Python is so easy, Python is a set of tools that you can use like ohh i wana see something on screen so you use print("Hello, world!"). That's why i will teach you python from beginning. </p>
+                <button class="lbt">Learn -></button>
+            </div>
+            <div class="gamedev">
+                <img src="unity1.jpg" alt="" class="gd">
+                <h1>Learn GameDev</h1>
+                <p class="lcontent">Game devlopment is the process of making games. A game can be developed by a person or a team, most people think that making games is so hard and they think it is not for me, now many people think that where should i start learning game devlopment. That's why i am here to teach you game devlopment.</p>
+                <button class="lbt">Learn -></button>
+            </div>
+            <div class="cubing">
+                <img src="cube.png" alt="" class="rc">
+                <h1>Learn Rubik's cube</h1>
+                <p class="lcontent">Rubik's cube is a puzzle. And many people think that only a genius can solve a Rubik's cube but no matter how genius a person is he cant solve rubik's cube only if he knows the algorithm or he will spend years solving the cube but he can't solve it, but you can. And that's why i am gonna teach you how to solve a Rubik's cube with just 7 simple steps.</p>
+                <button class="lbt">Learn -></button>
+
+            </div>
+        </div>
+    </section>
+    <section class="games" id="games">
+        <h1>Games</h1>
+        <p>Some of the games that i made in Unity 3D.</p>
+        <div class="gamesbox">
+            <div class="gameev">
+                <img src="g1.png" alt="" class="gd">
+                <h1>Games</h1>
+                <p class="lcontent">Games that i made in Unity 3D, in this game you can click to get some score and you can click it infinite times and get infinite score. You can download this game by pressing the download button below.</p>
+                <button class="lbt">Download -></button>
+            </div>
+        </div>
+    </section>
+    <section class="apps" id="apps">
+        <h1>Apps</h1>
+        <p class="accl">Apps and software that i made.</p>
+        <br>
+        <br>
+        <h2>Coming Soon</h2>
+        <br>
+        <br>
+    </section>
+    <section class="about" id="about">
+        <div class="abline"></div>
+        <br>
+        <br>
+        <h1>About me</h1>
+        <p>Hello my name is Mudit anand and i am 12yo and i read in class 6th and my school name is Sai Academy. My father's name is Sri Shivanand and my mother's name is Smt Jyothshna Devi and my grandfather's name is Sri Rajnikant. And my grandfather teached me everything about all this. And i made this webiste for my apps and games. I am learning programming, coding, gamedev, webdev and appsdev. Thankyou for visiting my webiste 🙂.</p>
+        <br>
+        <br>    
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </section>
+    <section class="footer">
+         <h1 class="pdh">Web Developer:</h1> 
+         <p class="pdp">Mudit Anand.</p>
+        <h2 class="pdh2">Senior Product Designer:</h2>
+        <p class="pdp2">Mudit Anand.</p>
+        <p class="smf">Hello this webiste was made for my games and apps. And again thankyou for visiting my webiste. ThankYou!.</p>
+        <p class="copyright">
+            copyright ©; 2022 MSBrothers. Designed by Mudit Anand.
+        </p>
+    </section>
+</body>
+</html>
